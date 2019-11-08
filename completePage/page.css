@@ -1,0 +1,423 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}       
+/***页面主体***/
+#bar-left{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    width: 340px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}       
+/***左侧固定的黑色bar块整体***/
+#bar-left-first{
+    background-color: #1d2531;
+    height: 100%;
+    width: 90px;
+    display: flex;
+    flex-flow: column nowrap;
+}       
+/***黑色bar块左部分左上图标***/
+#bottom-icons{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row;
+    width: 90px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}       
+/***黑色bar块左部分左下角小图标***/
+#bar-left-first img{
+    padding: 15px 15px 0 15px;
+}       
+/***黑色bar块左部分左上图标图片在div中的位置***/
+#bar-left-second{
+    background-color: #222c3c;
+    position: relative;
+    width: 250px;
+    height: 100%;
+}       
+/***黑色bar块右部分内容外层***/
+dl{
+    display: block;
+}       
+/***黑色bar块右部分小字部分***/
+div{
+    display: block;
+}       
+/***所有div***/
+.content .setting{
+   float: right; 
+}       
+/***黑色bar块右部分上半块dt设置图标***/
+.content dt{    
+    color: #5b6779;
+    padding-bottom: 8px;
+}       
+/***黑色bar块右部分上半块dt整体布局***/
+.content dd{
+    display: block;
+    line-height: 38px;
+    font-size: 14px;
+}       
+/***黑色bar块右部分上半块dd整体布局***/
+dd{
+    display: block;
+    margin-inline-start: 0;
+}       /***黑色bar块右部分dd整体布局***/
+#bar-left-second a{
+    color: #b7c0cd;
+    text-decoration: none;
+}       
+/***黑色bar块右部分链接***/
+#bar-left-second .content {
+    width: 190px;
+    height: 100%;
+    padding: 20px 30px 30px 30px;
+}
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}/***dl***/
+.content .last-dd{
+    border-bottom: solid 1px  #2a3547 ;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}/***分割线***/
+.content .products-icons{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+}
+#products dd{
+    display: block;
+}
+/***带图标dd***/
+#bottom-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    color: white;
+    flex-flow: row;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#progress-bar{
+    width: 40%;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    height: 4px;
+    border-radius: 10px;
+}
+/******/
+main{
+    margin-left: 340px;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e9ec;
+    z-index: 99;
+    background-color: white;
+}
+#state{
+    position: absolute;
+    background-color: white;
+    border: 3px solid #38a76a;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 45px;
+    right: 170px;
+}
+#admin div{
+    line-height: 25px;
+    color: rgb(35, 153, 241);
+}
+.user_character{
+    height: 10px;;
+}
+header h1{
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #354052;
+}
+header #admin{
+    padding-right: 15px;
+}
+#admin img{
+    float: left;
+    padding-right: 15px;
+}
+.user_character{
+    color: #b5b5b5;
+    font-size: 14px;
+    font-weight: 500;
+}
+.drop_botton{
+    float: right;
+    border: none;
+    background: transparent;
+}
+main{
+    height: 100%;
+}
+.list-block{
+  /***  border-bottom: solid 1px #b5b5b5;  ***/
+}
+#list{
+    width: 400px;
+    border-right: 1px solid #e6e9ec;
+
+    float: left;
+}
+#search{
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #e6e9ec;
+}
+#search-input{
+    width: 80%;
+    height: 35px;
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+    outline: none;
+    background: url(images/search.png) no-repeat 97%;
+}
+.list-block{
+    height: 105px;
+    border-bottom: 1px solid #e6e9ec;
+    padding: 20;
+}
+#list-head{
+    border-left: #2399f2 solid 3px;
+}
+#main-content{
+    margin-left: 400px;
+    width: 66%;
+    border-left: #e6e9ec 1px solid;
+}
+#top-books{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e9ec;
+    padding-left: 30px;
+}
+.numbers{
+    float: right;
+    text-align: center;
+    background-color: #2399f2;
+    width: 30px;
+    height: 22px;
+    color: white;
+    border-radius: 13px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+#warning{
+    background-color: red;
+    float: right;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+    text-align: center;
+}
+.online-user{
+    float: left;
+    margin-right: 20px;
+}
+.user{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    line-height: 18px;
+}
+.user-from{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #b5b5b5;
+}
+.users-name{
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+}
+#top-user{
+    color: rgb(35, 153, 241);
+}
+.distance{
+    font-weight: 500;
+    font-size: 16px;
+    color: #7F8FA4;
+}
+.user-message{
+    font-size: 14px;
+    color: rgb(88, 93, 104);
+    padding-top: 10px;
+}
+.user-flex-left{
+    width: 250px;
+}
+#top-books-right{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+#top-books-right-botton{
+    padding-right: 20px;
+    border-right: #e6e9ec solid 1px;
+}
+.top-books-right-botton{
+    background-color: #fdfdfe;
+    border: none;
+}
+#top-books-left-span{
+    position: relative;
+}
+#top-books-left-icon{
+    position: absolute;
+    top: 8px;
+    right: -14px;
+    width: 8px;
+    height: 8px;
+    background-color: #28bd3f;
+    border-radius: 50%;
+}
+#top-books-right{
+    padding: 20px 0 19px 0;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#top-books-right button{
+    width: 36px;
+    height: 30px;
+    border: #ced0da solid 1px;
+    border-radius: 5px;
+    background-color: #fbfcfd;
+}
+#botton-last{
+    margin-right: 20px;
+}
+#pages{
+    margin-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #b5b5b5;
+}
+.main-content-top{
+    padding-bottom: 20px;
+}
+.recent-content{
+    padding: 30px 50px 0 20px;
+    border-bottom: #e6e9ec solid 1px;
+}
+.name-padding{
+    padding-right: 10px;
+}
+.time{
+    font-size: 14px;
+    color: #7f8fa4;
+}
+.user-message-right{
+    padding: 0 10px 0px 70px;
+    font-size: 14px;
+    color: rgb(88, 93, 104);
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+.split{
+    position: relative;
+    padding-bottom: 30px;
+    text-align: center;
+    height: 1px;
+}
+.split-span{
+    position: absolute;
+    top: 20px;
+    left: 45%;
+    padding: 0 15px 0 15px;
+    background-color: white;
+    font-size: 14px;
+    color: #7F8FA4;
+    font-weight: lighter;
+}
+#split-span-blue{
+    color: #2399f1;
+}
+#user-message-right-last{
+    padding-bottom: 10px;
+}
+#recent-content{
+   border-bottom: 1px solid  #a7d6f9;
+}
+#two-images{
+    padding: 0 10px 0px 70px;
+    display: flex;
+    flex-flow: row;
+}
+#main-content-bottom{
+    padding: 30px 50px 0 20px;
+}
+#add-bar{
+    height: 53px;
+    border: 1px solid #dfe3e9;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row;
+}
+#add-botton{
+    background-color: #f5f7f9;
+    border: 1px solid #ced0da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 30px;
+    width: 53px;
+    height: 53px;
+    color: #9fa9ba;
+    position: relative;
+}
+#add-content{
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 20px;
+    color: #686c75;
+    outline: none;
+}
+
+
