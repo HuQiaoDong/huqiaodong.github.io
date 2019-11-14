@@ -1,5 +1,7 @@
 let map=document.querySelector(".map");
 let span=document.getElementsByClassName("start");
+let mask=document.querySelector(".mask");
+let body=document.querySelector("body");
 timer=null;
 /************************************/
 // let theMap=new Object();
@@ -74,6 +76,9 @@ let food={
     } 
 }
 
+let options={
+    "mask":0
+}
 //蛇的移动
 function move(){
          
@@ -100,21 +105,44 @@ function move(){
         //判断蛇是否撞到地图边界，撞到为死亡
         if(snake.X>=theMap.mapRow||snake.Y>=theMap.mapColumn||snake.X<0||snake.Y<0){
             clearInterval(timer);
-            alert("You are died!");
-            return;
+            body.className="animated hinge fadeOut";
+            setTimeout(function(){
+                alert("你挂了！");
+                window.location.href="index.html";
+                return;
+            },1200);   
         }
+        //自撞检测
         for(let j=0;j<snake.arrSnake.length;j++){
-            if(snake.arrSnake[j]==theMap.arrMap[snake.X][snake.Y]){           
-                alert("You are died!");
+            if(snake.arrSnake[j]==theMap.arrMap[snake.X][snake.Y]){
+                body.className="animated hinge fadeOut";           
                 clearInterval(timer);
-                return ;
+                setTimeout(function(){
+                    alert("你挂了！");
+                    window.location.href="index.html";
+                    return;
+                },1200); 
             }
         }
         //检测蛇头是否碰到食物，碰到则食物重新随机生成
         if(theMap.arrMap[snake.X][snake.Y]==theMap.arrMap[food.eggX][food.eggY]){
+            //吃到食物，重新生成食物
             food.randomCreate(theMap.mapRow-1,theMap.mapColumn-1);
+            //蛇身+1
             snake.arrSnake.push(theMap.arrMap[snake.X][snake.Y]);
+            //分数+1
+            options.mask++;
+            mask.innerHTML="分数:"+options.mask;
    //       console.log(snake.arrSnake);
+            //随机生成的食物位于蛇身处的处理
+            for(let k=0;k<snake.arrSnake.length;k++){
+                if(snake.arrSnake[k]==theMap.arrMap[food.eggX][food.eggY]){
+                    food.randomCreate(theMap.mapRow-1,theMap.mapColumn-1);
+                    snake.arrSnake.push(theMap.arrMap[snake.X][snake.Y]);
+                    options.mask++;
+                    mask.innerHTML="分数:"+options.mask;
+                }
+            }
         }
         //对应方向前一个li进行蛇样式添加
         theMap.arrMap[snake.X][snake.Y].className="snake"; 
@@ -159,18 +187,21 @@ onkeydown=function(){
         case 40:
             snake.direction="down";
             break;
-        case 32:
-            timer=setInterval(move,100);
-            span[0].innerHTML="";
-            break;
+        // case 32:
+        //     timer=setInterval(move,100);
+        //     span[0].innerHTML="";
+        //     break;
     }
 }
 //画出地图
 theMap.create_map(theMap.mapRow,theMap.mapColumn);
 map.style.width=25*theMap.mapRow+"px";
 map.style.height=25*theMap.mapColumn+"px";
+//绘制初始蛇身
 snake.theBody(5);
+//绘制食物
 food.drawFood();
 //1s调用一次Move方法
+timer=setInterval(move,100);
 
 
