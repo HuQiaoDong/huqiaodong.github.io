@@ -1,0 +1,131 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* margin: 60px; */
+}
+.container{
+    width: 1170px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    position: relative; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.container .main{
+    /* display: flex;
+    flex-flow: row; */
+    /* height: 100%; */
+    background-color: #eee;
+    border-radius: 5px;
+}
+.container .main .content{
+    margin: 60px;
+    margin-bottom: 30px;
+    /* border: 1px solid #000000; */
+}
+.container .main .content .center-text{
+    text-align: center;
+}
+.container .main .content h1{
+    font-size: 63px;
+    margin-bottom: 8px;
+    padding-top: 50px;
+}
+.container .main .content h2{
+    margin-top:10px;
+    font-size: 29px; 
+    margin-bottom: 10px;
+}
+.container .main .content .character{
+    margin: 8px 8px 24px 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.container .main .content .character p{
+    margin: 8px;
+    font-size: 13.5px;
+    color: #333;
+}
+.container .main .content .experience{
+    margin-left: 16.6666%;
+    width: 66.666%;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+.container .main .content .experience h3{
+    font-size: 24px;
+    margin-top: 20px;
+    padding-bottom: 45px;
+}
+
+.container .main .content .experience ul{
+    margin-top: 0;
+}
+.container .main .content .experience ul li{
+    font-size: 14px;
+}
+.container .main .content .experience blockquote{
+    margin: 20px 10px 30px 20px;
+}
+.container .main .content .experience blockquote p{
+  font-size: 21px;
+  font-weight: 200;
+}
+.container .main .content .experience blockquote footer{
+  font-size: 14px;
+  color: #777;
+  line-height: 1.42;
+}
+.container .main .content .experience blockquote footer cite{
+  font-style: italic;
+}
+.container .main .content .experience h3{
+}
+.container .main .content .experience h3 a{
+    color:#337AB8;
+    text-decoration: none;
+}
+.container .footer{
+    text-align: center;
+    padding-top: 20px;
+    border-top:  1px solid #ddd;
+    font-size: 14px;
+}
+.container .footer a{
+    color: #518BC2;
+    text-decoration: none;
+    background-color: transparent;
+}
+@media screen and (max-width:1170px){
+    .container{
+        width: auto;
+    }
+    .container .main .content .character img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width:820px){
+    .content {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .container{
+        width: auto;
+        height: auto;;
+    }
+    .container .main .content .experience {
+        margin-left: 5%;
+        width: 90%;
+        padding: 0 20px 0 20px;
+        box-sizing: border-box;
+    }
+}
