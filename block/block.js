@@ -26,7 +26,7 @@ function weekday1(weekday){
  }
  return weekday;
 }
-let result=document.getElementById("result");
+let result=document.getElementsByClassName("result");
 console.log(result);
 
 function addZero(time){
@@ -49,7 +49,7 @@ function Date1(){
     let h=addZero(hours);
     let m=addZero(minutes);
     let s=addZero(seconds);
-    result.innerHTML=year+"年"+month+"月"+day+"日"+week+h+":"+m+":"+s;
+    result[0].innerHTML=year+"年"+month+"月"+day+"日"+week+h+":"+m+":"+s;
     setTimeout("Date1()",200);
 }
 Date1();

@@ -1,9 +1,21 @@
-#result{
+
+.timer-div{
+    text-align: center; 
+    width: 45%;
+    background-color: #FFF;
+    border-radius: 25px;
+    /* border: 1px solid #fff; */
+    margin: auto;
+    margin-top: 300px; 
+}
+.timer-div .result{
     color: black;
-    text-align: center;
+    /* text-align: center;  */
     font-size: 50px;
-    margin-top: 200px;  
+    /* margin-top: 300px;   */
 }
 body{
-    background-image: url("https://www.lthbys.com/d/file/2014/07/29/96ad93d48df7ffe38ce9354d18cd4dca.jpg");   
+    background-image: url(climate_baby.png);  
+    width: 100%;
+    height: 100%;
 }
