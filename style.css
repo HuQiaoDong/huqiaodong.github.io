@@ -1,0 +1,62 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+.main .barrage-div{
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #00aaff;
+    margin-top: 30px;
+    border-radius: 10px;
+    /* background-image: url(http://www.drama-asia.se/wp-content/uploads/2016/06/14375197_1349947520504_800x600.jpg); */
+}
+.main .user-input{
+    width: 410px;
+    margin: auto;
+    margin-top: 20px;
+}
+.main .user-input .barrage-input{
+    width: 400px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #bbbbbb;
+    margin: auto;
+    text-align: start;
+    font-size: 15px;
+    color: #222222;
+    padding-left: 10px;
+}
+.main .user-input .button-div{
+    width: 350px;
+    margin: auto;
+    margin-top: 15px;
+}
+.main .user-input .button-div button{
+    width: 170px;
+    font-size: 20px;
+    border-radius: 3px;
+    height: 35px;
+}
+.main .user-input .button-div .go{
+    border: 1px #ff0000 solid;
+    color: #ff0000;
+}
+.main .user-input .button-div .clear{
+    border: 1px #bbbbbb solid;
+    color: #bbbbbb;
+}
+.right{
+    position: absolute;
+    left: 95%;
+    
+    display: block;
+}
