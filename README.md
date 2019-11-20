@@ -1,4 +1,4 @@
-[贪吃蛇](http://huqiaodong.github.io/snakeGame)  
+<http://huqiaodong.github.io/snakeGame>
 [轮播图](huqiaodong.github.io/轮播图)  
 [复杂页面](huqiaodong.github.io/completePage) 
 [Ajax测试](huqiaodong.github.io/Ajax)
