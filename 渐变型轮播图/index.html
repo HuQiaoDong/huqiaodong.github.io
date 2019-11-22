@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生轮播图</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="list">
+            <img src="images/image1.jpeg" alt="1" class="picture">
+            <img src="images/image2.jpeg" alt="2" class="picture">
+            <img src="images/image3.jpeg" alt="3" class="picture">
+            <img src="images/image4.jpeg" alt="4" class="picture">
+            <img src="images/image5.jpeg" alt="5" class="picture">
+            <img src="images/image1.jpeg" alt="1" class="picture">
+        </div>
+        <div class="buttons">
+            <span class="btn on"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+        </div>
+        <a href="javascript:;" class="back switch">&lt</a>
+        <a href="javascript:;" class="next switch">&gt</a>
+        <!-- &lt为<的转义,&gt为>的转义 a标签的href为javascript:;时，能在保持a标签特性前提下禁止一切跳转 -->
+    </div>    
+    <script src="main.js"></script>
+</body>
+</html>
