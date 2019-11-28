@@ -139,4 +139,3 @@ container.onmouseleave=function(){
 }
 // timer=setInterval(turnRight,changeTime);
 timer=setTimeout(turnRight,changeTime);
-
