@@ -21,7 +21,7 @@ let listWidth=list.offsetWidth;
 let pictureWidth=pictures.offsetWidth;
 function turnRight(){
     //视图切换到下一张图片
-    list.style.left=list.offsetLeft-speed+"px";
+    moveRight();
     console.log("当前视窗在图片条中的位置为"+Math.abs(list.offsetLeft));
     if(isStop()){
         changeTime=4000;
@@ -89,10 +89,10 @@ function btn_Index(){
         }
 }
 function moveLeft(){
-    list.style.left=list.offsetLeft+50+"px";
+    list.style.left=list.offsetLeft+speed+"px";
 }
 function moveRight(){
-    list.style.left=list.offsetLeft-50+"px";
+    list.style.left=list.offsetLeft-speed+"px";
 }
 function moveBeforeImage(){
     moveLeft();
