@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="head">
+        <h1 class="title">来自对bilibili用户灵魂深处的拷问</h1>
+        <p class="description">感谢您百忙之中抽出时间完成此调查</p>
+    </header>
+    <form action="" class="survey-form">
+        <label for="" class="label-container label name-label">
+            姓名
+            <input type="text" class="user-input name" placeholder="请填写你的名字" maxlength="15" required>
+        </label>
+        <label for="" class="label-container label email-label">
+            邮箱
+            <input type="email" class="user-input email" placeholder="请填写你的邮箱" required>
+        </label>
+        <label for="" class="label-container label age-label">
+            年龄(选填)
+            <input type="number" class="user-input age" placeholder="请填写你的年龄"  maxlength="3">
+        </label>
+        <label for="" class="label-container label select-label">
+            你最喜欢的动漫作品是什么？
+            <select name="" id="dropdown" class="dropdown" required>
+                <option value style="display: none">从以下选项中选择</option>
+                <option value="2">火影忍者</option>
+                <option value="3">JOJO的奇妙冒险</option>
+                <option value="4">海贼王</option>
+                <option value="5">四月是你的谎言</option>
+                <option value="6">其它</option>
+            </select>   
+        </label>
+        <label for="" class="label-container label all-radio-input-label">
+            从下面几种类型乐器中选择你最喜欢的一类
+            <label for="" class="label radio-input-label">
+                管乐
+                <input type="radio" class="radio-input" name="best-love">
+            </label>
+            <label for="" class="label radio-input-label">
+                弦乐
+                <input type="radio" class="radio-input" name="best-love">
+            </label>
+            <label for="" class="label radio-input-label">
+                打击乐
+                <input type="radio" class="radio-input" name="best-love">
+            </label>
+        </label>
+        <label for="dropdown2" class="label-container label supportWay-label">
+            看到喜欢的视频会选择以什么方式支持up主?
+            <select name="dropdown2" id="dropdown2" class="dropdown" required>
+                <!-- value不设置，required验证有效 -->
+                <option value style="display: none">从以下选项中选择</option>
+                <option value="two-2">点赞</option>
+                <option value="two-3">投币</option>
+                <option value="two-4">收藏</option>
+                <option value="two-5">充电</option>
+                <option value="two-6">三连</option>
+                <option value="two-7">白嫖</option>
+            </select>   
+        </label>
+        <label for="" class="label-container label checkboxs-title">
+            在哔哩哔哩上比较关注什么内容？
+            <label for="1" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="1" name="options" value="dance">
+                舞蹈
+            </label>
+            <label for="2" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="2" name="options" value="game">
+                游戏
+            </label>
+            <label for="3" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="3" name="options" value="life">
+                生活
+            </label>
+            <label for="4" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="4" name="options" value="vlog">
+                VLOG
+            </label>
+            <label for="5" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="5" name="options" value="ghost">
+                鬼畜
+            </label>
+            <label for="6" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="6" name="options" value="moves">
+                电影
+            </label>
+            <label for="7" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="7" name="options" value="fashion">
+                时尚
+            </label>
+            <label for="8" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="8" name="options" value="music">
+                音乐
+            </label>
+            <label for="9" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="9" name="options" value="digital">
+                数码
+            </label>
+            <label for="10" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="10" name="options" value="animation">
+                动画
+            </label>
+            <label for="11" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="11" name="options" value="comic">
+                漫画
+            </label>
+            <label for="12" class="label checkboxs-label">
+                <input type="checkbox" class="checkboxs" id="12" name="options" value="live">
+                直播
+            </label>
+        </label>
+        <label for="suggestions" class="label-container label textarea-label">
+            <textarea name="suggestions" id="suggestions" cols="30" rows="8" placeholder="在这里写下您宝贵的建议吧！"></textarea>
+        </label>
+        <button type="submit" class="submit-button">提交</button>
+    </form>
+</div>
+    <script src="../JavaScripts/main.js"></script>
+</body>
+</html>

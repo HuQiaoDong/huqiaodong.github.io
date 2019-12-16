@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+/* 变量声明 */
+:root{
+   --color-deep-pink:#d83988;
+   --color-light-pink:#dd1ec4;
+   --color-blood-pink:#b8185b;
+}
+body,html{
+   height: 100%;
+   width: 100%;
+}
+body{
+   /* position: fixed; */
+   font-family: 'Poppins', sans-serif;
+   top: 0px;
+   left: 0px;
+   background: var(--color-blood-pink);
+   background-image: url(../images/201910061036473777.png.h700.jpg);
+   /* 使图片填满容器 */
+   background-size: cover;
+   /* 设置图片不重复 */
+   background-repeat: no-repeat;
+   /* 设置背景不随滚动条滚动 */
+   background-attachment: fixed;
+}
+/* 内容容器 */
+.container{
+   position: relative;
+   width: 650px;
+   height: 100%;
+   margin: auto;
+}
+/* 头部内容 */
+.container header{
+   margin-top: 50px;
+   text-align: center;
+   color: #fff;
+}
+/* 头部标题 */
+.container .head .title{
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+/* 头部描述文本 */
+.container .head .description{
+   font-weight: 300;
+   line-height: 1.2;
+   margin-bottom: 1.2em;
+   font-style: italic;
+}
+/* 表单容器 */
+.container .survey-form{
+   position: relative;
+   display: block;
+   padding: 60px 40px 40px 40px;
+   background-color: var(--color-deep-pink);
+   border-radius: 5px;
+   margin-bottom: 10px;
+   z-index: 1;
+   background-color: rgba(255,255,255,0);
+   box-shadow: 6px 6px 15px  #444444;
+   filter: blur(0px);
+}
+.container .survey-form::after{
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: -1;
+   border-radius: 5px;
+   background-color: rgba(216,57,136, 0.8);
+}
+/* 姓名输入框辅助文本 */
+.survey-form .name-label{
+   display: block;
+}
+/* 姓名输入框 */
+.survey-form .name-label .name {
+   display: block;
+}
+/* 邮箱输入框辅助文本 */
+.survey-form .email-label{
+   display: block;
+}
+/* 邮箱输入框 */
+.survey-form .email-label .email{
+   display: block;
+}
+/* 年龄输入框辅助文本 */
+.survey-form .age-label{
+   display: block;
+}
+/* 年龄输入框 */
+.survey-form .age-label .age{
+   display: block;
+}
+/* 下拉框标题描述 */
+.survey-form .select-label{
+    display: block;
+}
+/* 下拉框 */
+.survey-form .select-label #dropdown{
+    display: block;
+}
+/* 下拉框选项 */
+.survey-form .select-label #dropdown option{
+
+}
+/* 所有单选输入框顶部描述文本 */
+.survey-form .all-radio-input-label{
+   display: block;
+}
+/* 各个单选框描述文本 */
+.survey-form .all-radio-input-label .radio-input-label{
+   display: block;
+}
+/* 单选框 */
+.survey-form .all-radio-input-label .radio-input-label .radio-input{
+}
+/* 第二个选择下拉框描述文本 */
+.survey-form .supportWay-label{
+   display: block;
+}
+/* 第二个下拉框 */
+.survey-form .supportWay-label #dropdown2{
+   display: block;
+}
+/* 第二个下拉框选项 */
+.survey-form .supportWay-label #dropdown2 option{
+
+}
+/* 复选框大标题 */
+.survey-form .checkboxs-title{
+    display: block;
+}
+/* 各个复选框描述文本 */
+.survey-form .checkboxs-title .checkboxs-label{
+    display: block;
+}
+/* 复选框 */
+.survey-form .checkboxs-title .checkboxs-label .checkboxs{
+}
+/* 留言框描述文本 */
+.survey-form .textarea-label{
+   display: block;
+}
+/* 留言框 */
+.survey-form .textarea-label #suggestions{
+   width: 100%;
+   border-radius: 3px;
+   font-size: 15px;
+}
+
+/* 提交按钮 */
+.submit-button{
+   width: 100%;
+   height: 35px;
+   background-color: var(--color-blood-pink);
+   border-radius: 5px;
+   color: #fff;
+   font-size: 15px;
+   border: none;
+}
+/* 输入框 */
+.user-input{
+   width: 100%;
+   height: 35px;
+   border-radius: 5px;
+   padding: 0;
+   font-size: 13px;
+   padding-left: 10px;
+   box-sizing: border-box;
+}
+/* 下拉框 */
+.dropdown{
+   width: 100%;
+   height: 35px;
+   border-radius: 5px;
+   font-size: 13px;
+}
+/* 文本提示 */
+.label{
+   font-size: 18px;
+   color: #fff;
+}
+/* 包裹子元素充当外层容器的label */
+.label-container{
+   margin-bottom: 30px;
+}
