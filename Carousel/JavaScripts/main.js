@@ -9,6 +9,7 @@ let timer=null;
 let timer2=null;
 //停顿点的延时
 let changeTime=4000;
+let changeTimer2=0.1;
 //移动一次的Left值
 let speed=25;
 //底部按钮位置定位
@@ -35,7 +36,7 @@ function turnRight(){
         console.log("停顿点");
     }
     else{
-        changeTime=3;
+        changeTime=10;
     }
     //当前图片为最后一张时，下一次播放回到开始播放第一张图片
     timer=setTimeout(turnRight,changeTime);
@@ -105,7 +106,7 @@ function moveBeforeImage(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveBeforeImage,3);
+    timer2=setTimeout(moveBeforeImage,changeTimer2);
 }
 function moveNextImage(){
     moveRight();
@@ -117,7 +118,7 @@ function moveNextImage(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveNextImage,3);
+    timer2=setTimeout(moveNextImage,changeTimer2);
 }
 function moveIndexImage1(){
     indexOffsetLeft=-650;
@@ -131,7 +132,7 @@ function moveIndexImage1(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveIndexImage1,3);
+    timer2=setTimeout(moveIndexImage1,changeTimer2);
 }
 function moveIndexImage2(){
     indexOffsetLeft=-1300;
@@ -145,7 +146,7 @@ function moveIndexImage2(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveIndexImage2,3);
+    timer2=setTimeout(moveIndexImage2,changeTimer2);
 }
 function moveIndexImage3(){
     indexOffsetLeft=-1950;
@@ -159,7 +160,7 @@ function moveIndexImage3(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveIndexImage3,3);
+    timer2=setTimeout(moveIndexImage3,changeTimer2);
 }
 function moveIndexImage4(){
     indexOffsetLeft=-2600;
@@ -173,7 +174,7 @@ function moveIndexImage4(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveIndexImage4,3);
+    timer2=setTimeout(moveIndexImage4,changeTimer2);
 }
 function moveIndexImage5(){
     indexOffsetLeft=-3250;
@@ -187,7 +188,7 @@ function moveIndexImage5(){
         clearTimeout(timer2);
         return ;
     }
-    timer2=setTimeout(moveIndexImage5,3);
+    timer2=setTimeout(moveIndexImage5,changeTimer2);
 }
 //点击按钮向左移动一张图片
 back.onclick=function(){
@@ -251,6 +252,7 @@ container.onmouseenter=function(){
 container.onmouseleave=function(){
     // turnRight();
     clearTimeout(timer);
+    clearTimeout(timer2);
     turnRight();
 }
 // timer=setInterval(turnRight,changeTime);

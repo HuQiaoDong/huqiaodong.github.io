@@ -28,7 +28,7 @@ html,body{
     position: absolute;
     z-index: 2;
     left: 200px;
-    bottom: 10px;
+    bottom: 12px;
     width: 300px;
     height: 5px;
 }
