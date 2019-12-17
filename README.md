@@ -1,4 +1,4 @@
-###项目预览
+### 项目预览
 ##### [贪吃蛇]("https://huqiaodong.github.io/snakeGame")
 ##### [传统轮播图]("https://huqiaodong.github.io/传统轮播图")
 ##### [滑动效果轮播图]("https://huqiaodong.github.io/Carousel/HTML")
