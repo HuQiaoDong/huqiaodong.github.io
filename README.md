@@ -1,5 +1,5 @@
 ## 项目预览
- [贪吃蛇](https://huqiaodong.github.io/snakeGame)
+ [贪吃蛇](https://huqiaodong.github.io/snakeGame)</br>
  [传统轮播图](https://huqiaodong.github.io/传统轮播图)
  [滑动效果轮播图](https://huqiaodong.github.io/Carousel/HTML)
  [一个好看的时钟应用](https://huqiaodong.github.io/block)
