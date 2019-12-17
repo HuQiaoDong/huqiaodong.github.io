@@ -16,7 +16,7 @@
     <form action="" class="survey-form">
         <label for="" class="label-container label name-label">
             姓名
-            <input type="text" class="user-input name" placeholder="请填写你的名字" maxlength="15" required>
+            <input type="text"  class="user-input name" placeholder="请填写你的名字" maxlength="15" required>
         </label>
         <label for="" class="label-container label email-label">
             邮箱
@@ -39,17 +39,17 @@
         </label>
         <label for="" class="label-container label all-radio-input-label">
             从下面几种类型乐器中选择你最喜欢的一类
-            <label for="" class="label radio-input-label">
+            <label for="wind-music" class="label radio-input-label">
                 管乐
-                <input type="radio" class="radio-input" name="best-love">
+                <input type="radio" id="wind-music" class="radio-input" name="best-love">
             </label>
-            <label for="" class="label radio-input-label">
+            <label for="stringed-music" class="label radio-input-label">
                 弦乐
-                <input type="radio" class="radio-input" name="best-love">
+                <input type="radio" id="stringed-music" class="radio-input" name="best-love">
             </label>
-            <label for="" class="label radio-input-label">
+            <label for="percussion" class="label radio-input-label">
                 打击乐
-                <input type="radio" class="radio-input" name="best-love">
+                <input type="radio" id="percussion" class="radio-input" name="best-love">
             </label>
         </label>
         <label for="dropdown2" class="label-container label supportWay-label">
@@ -119,7 +119,7 @@
         <label for="suggestions" class="label-container label textarea-label">
             <textarea name="suggestions" id="suggestions" cols="30" rows="8" placeholder="在这里写下您宝贵的建议吧！"></textarea>
         </label>
-        <button type="submit" class="submit-button">提交</button>
+        <button type="submit" class="submit-button" >提交</button>
     </form>
 </div>
     <script src="../JavaScripts/main.js"></script>
