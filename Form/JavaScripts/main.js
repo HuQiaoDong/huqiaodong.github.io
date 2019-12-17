@@ -58,7 +58,7 @@ function isCheckboxChecked(){
 
 submitButton.onclick=function(){
     if(isRadioChecked()&&isCheckboxChecked()){
-        alert("提交成功!");
+        console.log("单选框和复选框验证通过");
     }
     else if(isRadioChecked()==false){
         alert("未选择最喜欢的一类乐器!");
