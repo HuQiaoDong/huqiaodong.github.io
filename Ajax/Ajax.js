@@ -32,7 +32,7 @@ function loadXMLDoc()
 		}
 	}
 	//open方法为建立数据请求做准备，第一个参数给请求方式，第二为请求的数据API接口，第三为是否将请求设置为异步
-	xmlhttp.open("GET","http://apis.juhe.cn/mobile/get?phone="+input.value+"&key=d892d52b2d16214907f49c1f257ea716“,true);
+	xmlhttp.open("GET","http://apis.juhe.cn/mobile/get?phone="+input.value+"&key=d892d52b2d16214907f49c1f257ea716",true);
 	//真正建立请求的XHR方法，使用get方法时参数为null值，数据不缓存到本地
 	xmlhttp.send();
 	
