@@ -227,39 +227,49 @@ next.onclick=function(){
     }
 }
 // 第一个按钮按下移动到第一张图
-btn[0].onclick=function(){
+btn[0].onmouseenter=function(){
     index=0;
     // list.style.left=-650+"px";
-    moveIndexImage1();
-    btn_Index();
+    if(isStop()){
+        moveIndexImage1();
+        btn_Index();
+    }
 }
 // 第二个按钮按下移动到第二张图
-btn[1].onclick=function(){
+btn[1].onmouseenter=function(){
     index=1;
     // list.style.left=-1300+"px";
-    moveIndexImage2();
-    btn_Index();
+    if(isStop()){
+        moveIndexImage2();
+        btn_Index();
+    }
 }
 // 第三个按钮按下移动到第三张图
-btn[2].onclick=function(){
+btn[2].onmouseenter=function(){
     index=2;
     // list.style.left=-1950+"px";
-    moveIndexImage3();
-    btn_Index();
+    if(isStop()){
+        moveIndexImage3();
+        btn_Index();
+    }
 }
 // 第四个按钮按下移动到第四张图
-btn[3].onclick=function(){
+btn[3].onmouseenter=function(){
     index=3;
     // list.style.left=-2600+"px";
-    moveIndexImage4();
-    btn_Index();
+    if(isStop()){
+        moveIndexImage4();
+        btn_Index();
+    }
 }
 // 第五个按钮按下移动到第五张图
-btn[4].onclick=function(){
+btn[4].onmouseenter=function(){
     index=4;
     // list.style.left=-3250+"px";
-    moveIndexImage5();
-    btn_Index();
+    if(isStop()){
+        moveIndexImage5();
+        btn_Index();
+    }
 }
 //鼠标移动到视窗，清除定时器，停止播放
 container.onmouseenter=function(){
