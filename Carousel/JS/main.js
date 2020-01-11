@@ -22,7 +22,13 @@ let index=0;
 let listWidth=list.offsetWidth;
 //每张图片的宽度，用于视图移动
 let pictureWidth=pictures.offsetWidth;
-function turnRight(){
+function autoPlay(){
+    // if(isMouseLeave){
+    //     setTimeout(function(){
+    //         console.log("已延时2s");
+    //         isMouseLeave=false;
+    //     },2000)
+    // }
     //视图切换到下一张图片
     moveRight(autoSpeed);
     console.log("当前视窗在图片条中的位置为"+Math.abs(list.offsetLeft));
@@ -41,11 +47,11 @@ function turnRight(){
         changeTime=10;
     }
     //当前图片为最后一张时，下一次播放回到开始播放第一张图片
-    timer=setTimeout(turnRight,changeTime);
+    timer=setTimeout(autoPlay,changeTime);
 }
+//判断是否为轮播停顿状态，是返回true
 function isStop(){
     if((Math.abs(list.offsetLeft))%pictureWidth==0){
-
         return true;
     }
     else{
@@ -97,6 +103,7 @@ function moveLeft(speed){
 function moveRight(speed){
     list.style.left=list.offsetLeft-speed+"px";
 }
+// 移动到上一张图片的实现过程
 function moveBeforeImage(){
     moveLeft(moveOneImageSpeed);
     if(isStop()){
@@ -110,6 +117,7 @@ function moveBeforeImage(){
     }
     timer2=setTimeout(moveBeforeImage,changeTimer2);
 }
+// 移动到下一张图片的实现过程
 function moveNextImage(){
     moveRight(moveOneImageSpeed);
     if(isStop()){
@@ -122,6 +130,7 @@ function moveNextImage(){
     }
     timer2=setTimeout(moveNextImage,changeTimer2);
 }
+//移动到的第一张图片的实现过程
 function moveIndexImage1(){
     indexOffsetLeft=-650;
     if(indexOffsetLeft>list.offsetLeft){
@@ -136,6 +145,7 @@ function moveIndexImage1(){
     }
     timer2=setTimeout(moveIndexImage1,changeTimer2);
 }
+//移动到的第二张图片的实现过程
 function moveIndexImage2(){
     indexOffsetLeft=-1300;
     if(indexOffsetLeft>list.offsetLeft){
@@ -150,6 +160,7 @@ function moveIndexImage2(){
     }
     timer2=setTimeout(moveIndexImage2,changeTimer2);
 }
+//移动到的第三张图片的实现过程
 function moveIndexImage3(){
     indexOffsetLeft=-1950;
     if(indexOffsetLeft>list.offsetLeft){
@@ -164,6 +175,7 @@ function moveIndexImage3(){
     }
     timer2=setTimeout(moveIndexImage3,changeTimer2);
 }
+//移动到的第四张图片的实现过程
 function moveIndexImage4(){
     indexOffsetLeft=-2600;
     if(indexOffsetLeft>list.offsetLeft){
@@ -178,6 +190,7 @@ function moveIndexImage4(){
     }
     timer2=setTimeout(moveIndexImage4,changeTimer2);
 }
+//移动到的第五张图片的实现过程
 function moveIndexImage5(){
     indexOffsetLeft=-3250;
     if(indexOffsetLeft>list.offsetLeft){
@@ -213,31 +226,35 @@ next.onclick=function(){
         moveNextImage();
     }
 }
-//监听所有底部按钮事件
+// 第一个按钮按下移动到第一张图
 btn[0].onclick=function(){
     index=0;
     // list.style.left=-650+"px";
     moveIndexImage1();
     btn_Index();
 }
+// 第二个按钮按下移动到第二张图
 btn[1].onclick=function(){
     index=1;
     // list.style.left=-1300+"px";
     moveIndexImage2();
     btn_Index();
 }
+// 第三个按钮按下移动到第三张图
 btn[2].onclick=function(){
     index=2;
     // list.style.left=-1950+"px";
     moveIndexImage3();
     btn_Index();
 }
+// 第四个按钮按下移动到第四张图
 btn[3].onclick=function(){
     index=3;
     // list.style.left=-2600+"px";
     moveIndexImage4();
     btn_Index();
 }
+// 第五个按钮按下移动到第五张图
 btn[4].onclick=function(){
     index=4;
     // list.style.left=-3250+"px";
@@ -252,11 +269,15 @@ container.onmouseenter=function(){
 }
 //鼠标离开视窗，调用自动轮播函数
 container.onmouseleave=function(){
-    // turnRight();
-    clearTimeout(timer);
-    clearTimeout(timer2);
-    turnRight();
+    //避免短时间多次触发鼠标移入移出事件造成的定时器叠加
+    //轮播动作停止后再清除定时器，避免在轮播过程鼠标移入又快速移出造成的轮播中断
+    if(isStop()){
+        clearTimeout(timer);
+        clearTimeout(timer2);
+    }
+    //重新在2s后进入autoPlay函数进行自动轮播
+    timer=setTimeout(autoPlay,2000);
 }
-// timer=setInterval(turnRight,changeTime);
-timer=setTimeout(turnRight,changeTime);
+// 进入自动轮播模式,定时器autoPlay递归
+timer=setTimeout(autoPlay,changeTime);
 console.log(timer);
