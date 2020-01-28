@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f3f6f8;
+}
+/* 链接默认样式 */
+a{
+    text-decoration: none;
+    color: #020606;
+}
+a:hover{
+    color:#00a8fe;
+}
+ul{
+    list-style: none;
+}
+input{
+    /* 去除得到输入框焦点后的边框线 */
+    outline: medium;
+}
+.container .top-container{
+    background-color: #f3f7f7;
+}
+.container .top-box{
+    height: 91px;
+}
+
+.container .top-box .top-first-box{
+    float: left;
+    padding-top: 30px;
+    padding-right: 45px;
+}
+.container .top-box ul{
+    float: left;
+    list-style: none;
+    font-size: 18px;
+}
+.container .top-box ul li{
+    float: left;
+    width: 90px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.container .top-box ul li a{ 
+    font-size: 18px;
+    color: #030606;
+    padding: 8px;
+
+}
+.container .top-box ul li a:hover{ 
+    color: #00a8fe;
+}
+.blue-border{
+    border-bottom: 2px solid skyblue;
+}
+.container .top-box .top-third-box{
+    float: left;
+    margin: 30px 0px 0px 85px;
+}
+.container .top-box .top-third-box .input-area{
+    float: left;
+    width: 340px;
+    height: 38px;
+    border: 1px solid #00a6ff;
+    border-right: none;
+    padding-left: 20px;
+    font-size: 14px;
+    /* 去除得到输入框焦点后的边框线 */
+    outline: medium;
+}
+.container .top-box .top-third-box .input-area::-webkit-input-placeholder {
+    color: #c4c7c7;
+} 
+.container .top-box .top-third-box .search-button{
+    float: left;
+    
+}
+.container .top-box .top-four-box{
+    float: left;
+    margin: 32px 0px 0px 30px;
+} 
+.container .top-box .top-four-box a{
+    color: #9b9e9e;
+} 
+.container .top-box .top-four-box a:hover{
+    color: #00a4f9;
+} 
+.container .top-box .top-four-box div:nth-child(1){
+    float: left;
+    margin-right: 5px;
+} 
+.container .top-box .top-four-box div:nth-child(1) img{
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+} 
+.container .top-box .top-four-box div:nth-child(2){
+    float: left;
+    margin-top: 3px;
+} 
+/* banner层通栏 */
+.container .banner-box{
+    height: 418px;
+    background-color: #1b046b;
+}
+/* banner层内容版心 */
+.container .banner-box .banner{
+    height: 418px;
+    /* background-color: #260050; */
+    background-image: url(../images/banner2.png);
+    position: relative;
+}
+/* banner层左侧导航栏 */
+.container .banner .nav{
+    width: 150px;
+    padding: 12px 20px 0px 20px;
+    background-color: rgba(20,3,74,0.8);
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.container .banner .nav ul li a{
+    height: 45px;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    line-height: 45px;
+    width: 150px;
+}
+.container .banner .nav ul li a:hover{
+    color: #00a4f9;
+}
+.container .banner .nav ul li a span{
+    float: right;
+}
+/* banner层中间指示器 */
+.container .banner .slider{
+    width: 160px;
+    height: 14px;
+    position: absolute;
+    /* 自动拉伸盒子 */
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+}
+.container .banner .slider ul{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.container .banner .slider ul .bigger-circle{
+    width: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.container .banner .slider ul li{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+/* banner层右边课程表 */
+.container .banner .class-table{
+    width: 228px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.container .banner .class-table .title{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #9acfea;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.container .banner .class-table .content{
+    width: 200px;
+    padding: 0px 14px;
+}
+.container .banner .class-table .content li{
+    height: 47px;
+    padding-top: 12px;
+    border-top: 1px solid #ebebeb;
+    line-height: 1;
+}
+.container .banner .class-table .content li:nth-child(3){
+    color: #00a4f9;
+}
+.container .banner .class-table .content li:nth-child(3) a{
+    color: #00a4f9;
+}
+.container .banner .class-table .content li a{
+    font-size: 12px;
+    color: #aeaeae;
+}
+.container .banner .class-table .btn-bottom{
+    width: 198px;
+    height: 39px;
+    border: 1px solid #00a4f9;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 39px;
+    color: #00a4f9;
+    display: inline-block;
+    margin: 20px 14px 0px 14px;
+}
+/* 课程导航层 */
+.container .course-nav{
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.container .course-nav ul{
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    width: 820px;
+    margin: 0;
+}
+.container .course-nav .right-a{
+    margin-right: 25px;
+    line-height: 60px;
+    font-size: 12px;
+}
+.container .course-nav ul li{
+    width: 116px;
+    height: 22px;
+    margin: 19px 0px;
+    border-right: 1px solid #c0c0c0;
+    text-align: center;
+}
+.container .course-nav ul li:nth-child(1){
+    color: #00a4f9;
+     font-weight: bold;
+     font-size: 18px;
+     margin-left: 20px;
+}
+.container .course-nav ul li a{
+    color: #000000;
+}
+.container .course-nav ul li a:hover{
+    color: #00a4f9;
+}
+/* 精品课程 */
+/* 精品课程标题层 */
+.container .course-container .top-title{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #414444;
+    font-weight: normal;
+    line-height: 1;
+}
+.container .course-container .top-title a{
+    color: #c8cccc;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.container .course-container .top-title a:hover{
+    color: #00a4f9;
+}
+/* 精品课程第一行 */
+.container .course-container .top{
+    height: 270px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    position: relative;
+}
+/* 精品课程第二行 */
+.container .course-container .bottom{
+    height: 270px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    position: relative;
+}
+.container .course-container .top .course-box{
+    width: 228px;
+    height: 270px;
+    display: inline-block;
+}
+.container .course-container .top .course-box img{
+    width: 100%;
+}
+/* 课程盒子组件 */
+.course-box .course-box-bottom{
+    height: 68px;
+    padding: 25px;
+}
+.course-box .course-box-bottom p:nth-child(1){
+    font-size: 14px;
+    color: #060606;
+    margin-bottom: 15px;
+}
+.course-box:hover .course-box-bottom p:nth-child(1){
+    color: #00a4f9;
+}
+.course-box .course-box-bottom p:nth-child(2) span{
+    color: #fa8b46;
+}
+.course-box{
+    width: 228px;
+    height: 270px;
+    display: inline-block;
+}
+.course-box img{
+    width: 100%;
+    height: 152px;
+}
+/* 下层课程盒子底部内容 */
+.container .course-container .bottom .course-box .course-box-bottom{
+    height: 68px;
+    padding: 25px;
+}
+.container .course-container .bottom .course-box .course-box-bottom p:nth-child(1){
+    font-size: 14px;
+    color: #060606;
+    margin-bottom: 15px;
+}
+.container .course-container .bottom .course-box:hover .course-box-bottom p:nth-child(1){
+    color: #00a4f9;
+}
+.container .course-container .bottom .course-box .course-box-bottom p:nth-child(2) span{
+    color: #fa8b46;
+}
+.course-box-bottom p{
+    font-size: 12px;
+    color: #a7a7a7;
+}
+.course-box{
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 228px;
+    height: 270px;
+}
+.course-box img{
+    width: 228px;
+}
+.course-box:hover .course-box-bottom p:nth-child(1){
+    color: #00a4f9;
+}
+/* 编程入门第一层 */
+.container .code-box{
+    margin-top: 30px;
+}
+.code-box .code-box-title{
+    margin-bottom: 20px;
+    height: 20px;       
+}
+.code-box .code-box-title h2{
+    font-size: 20px;   
+    font-weight: normal;
+    color: #414444;
+}
+/* 编程入门第一层标题栏 */
+.code-box .code-box-title ul{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 340px;
+    height: 20px;
+}
+.code-box .code-box-title ul li a{
+    font-size: 16px;
+    color: #7e8181;
+}
+.code-box .code-box-title ul li a:hover{
+    color: #00a4f9;
+}
+.code-box .code-box-title a{
+    color: #c8cccc;
+    font-size: 12px;
+}
+.code-box .code-box-title a:hover{
+    color: #00a4f9;
+}
+/* 编程入门第一层内容 */
+.code-box-content{
+    height: 394px;
+}
+/* 编程入门第一层内容左部分 */
+.code-box-content .code-box-left{
+    width: 228px;
+    height: 394px;
+    background: url(../images/php1.png);
+    float: left;
+}
+.code-box-content .code-box-left .index{
+    width: 192px;
+    height: 344px;
+    padding: 50px 0px 0px 36px;
+}
+.index h2{
+    font-size: 18px;
+    color: #ffffff;
+}
+.index .php{
+    margin-bottom: 15px;
+}
+.index h2:nth-child(2){
+    margin-bottom: 50px;
+}
+.index ul{
+    background: url(../images/moreRadius.png) no-repeat 4px 10px;
+}
+.index ul li{
+    margin-bottom: 53px;
+    font-size: 14px;
+    color: #ffffff;
+    background: url(../images/radius.png) no-repeat left center;
+    padding-left: 16px;
+}
+/* 编程入门第一层内容右部分 */
+.code-box-content .code-box-right{
+    width: 957px;
+    height: 394px;
+    float: right;
+}
+.code-box-content .code-box-right .top-bar{
+    height: 100px;
+    background: url(../images/pyhton1.png);
+    margin-bottom: 20px;
+}
+.code-box-content .code-box-right .bottom-box{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+/* 底部 */
+.container .bottom-container{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.container .bottom-container .bottom-box{
+    background-color: #fff;
+    height: 220px;
+    overflow: hidden;
+}
+.container .bottom-container .bottom-box .left{
+    width: 500px;
+    margin: 30px 0px 0px 20px;
+    float: left;
+}
+.container .bottom-container .bottom-box .left p{
+    margin-bottom: 20px;
+}
+.container .bottom-container .bottom-box .left-top{
+    margin-bottom: 20px;
+}
+.container .bottom-container .bottom-box .left-middle{
+    font-size: 14px;
+}
+.container .bottom-container .bottom-box .left-bottom{
+    width: 118px;
+    height: 33px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px #03a5ff solid;
+}
+.container .bottom-container .bottom-box .left-bottom:hover{
+    color: #fff;
+    background-color: #03a5ff;
+}
+.container .bottom-container .bottom-box .left-bottom:hover a{
+    color: #fff;
+}
+.container .bottom-container .bottom-box .left-bottom a{
+    color: #03a5ff;
+}
+.container .bottom-container .right{
+    width: 555px;
+    height: 220px;
+    float: left;
+    margin-left: 120px;
+    padding-top: 33px;
+}
+.container .bottom-container .right a{
+    color: black;
+    font-size: 14px;
+}
+.container .bottom-container .right a:hover{
+    color:#1c88fe;
+}
+.text-box{
+    height: 144px;
+    width: 220px;
+    float: left; 
+}
+.title{
+    margin-bottom: 10px;
+}
+/* 版心类 */
+.wrap{
+    width: 1200px;
+    margin: auto;
+}
+.flL{
+    float: left;
+}
+.flR{
+    float: right;
+}
+/* 精品课程上行的两个图标 */
+.hot{
+    position: absolute;
+    top:4px;
+    left: 193px;
+}
+/* 精品课程下行的两个图标 */
+.new{
+    position: absolute;
+    top: 4px;
+    left: 436px;
+}
+/* 课程中文本只占一行的盒子 */
+.m-text{
+    margin-bottom: 35px !important;
+}
+/* flex水平between布 */
+.flex-row{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
