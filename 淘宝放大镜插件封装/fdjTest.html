@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fdj.css">
+    <script src="./jquery.min.js"></script>
+    <style>
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            /* width: 100vw; */
+            height: 100vh;
+            padding: 0px 150px;
+        }
+        
+        .box {
+            margin: auto 0px;
+            /* position: relative; */
+            width: 400px;
+            height: 400px;
+        }
+        
+        .box1 {
+            padding-right: 300px;
+            margin: auto 0px;
+            /* position: relative; */
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <!-- 基础放大镜功能组件 -->
+            <div class="container">
+                <!-- 鼠标移入图片中的黄色小方块 -->
+                <div class="mouse-box"></div>
+                <!-- 图片右侧出现的放大后效果图 -->
+                <div class="big-img"></div>
+            </div>
+            <!-- 切换图片选项卡组件 -->
+            <ul class="turn flexb">
+                <li style="border: 1px solid red;"><img src="./images/01s.webp" alt=""></li>
+                <li>
+                    <img src="./images/02s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/03s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/04s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/05s.webp" alt="">
+                </li>
+                <!-- <li>
+                    <img src="./images/06s.webp" alt="">
+                </li> -->
+                <!-- 切换放大倍数 -->
+                <select name="" class="beishu">
+                    <option value="2">X2</option>
+                    <option value="3">X3</option>
+                    <option value="4">X4</option>
+                    <option value="5">X5</option>
+                </select>
+                <!-- 切换放大图盒子大小 -->
+                <select name="" class="bili">
+                    <option value="1">1:1</option>
+                    <option value="1.3">1:1.3</option>
+                    <option value="1.5">1:1.5</option>
+                    <option value="2">1:1.2</option>
+                </select>
+            </ul>
+        </div>
+        <div class="box1">
+            <div class="container">
+                <!-- 鼠标移入图片中的黄色小方块 -->
+                <div class="mouse-box"></div>
+                <!-- 图片右侧出现的放大后效果图 -->
+                <div class="big-img"></div>
+            </div>
+            <ul class="turn flexb">
+                <li style="border: 1px solid red;"><img src="./images/01s.webp" alt=""></li>
+                <li>
+                    <img src="./images/02s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/03s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/04s.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/05s.webp" alt="">
+                </li>
+                <!-- <li>
+                    <img src="./images/06s.webp" alt="">
+                </li> -->
+                <select name="" class="beishu">
+                    <option value="2">X2</option>
+                    <option value="3">X3</option>
+                    <option value="4">X4</option>
+                </select>
+                <select name="" class="bili">
+                    <option value="1">1:1</option>
+                    <option value="1.1">1:1.1</option>
+                    <option value="1.5">1:1.5</option>
+                    <option value="2">1:2</option>
+                </select>
+            </ul>
+        </div>
+    </div>
+
+    <script src="fdj.js"></script>
+    <script>
+        let fdj1 = new Magnifier('.box', {
+            initialPic: '01.jpg',
+            zoomInPic: '1.jpg',
+            switchPic: true,
+            switchMul: true,
+            switchPicRatio: true,
+        });
+        let fdj2 = new Magnifier('.box1', {
+            initialPic: '01.jpg',
+            zoomInPic: '1.jpg',
+            switchPic: true,
+            switchMul: true,
+            switchPicRatio: true,
+        });
+    </script>
+</body>
+
+</html>

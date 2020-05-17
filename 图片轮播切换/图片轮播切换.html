@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexs{display: flex;flex-flow: row;justify-content: start;}
+        img{vertical-align: bottom;width: 600px;height: 480px;}
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .box{width: 100%px;height: 100%;}
+        .container{width: 1400px;height: 480px;margin: 100px auto;background-color: aqua;background-image: url(hd_bg.jpg);}
+        .nav{width: 680px;height: 100%;}
+        .nav li{width: 134px;height: 100%;}
+        .nav li a{width: 100%;height: 100%;display: block;}
+        .flexb{display: flex;flex-flow: row;justify-content: space-between;}
+        .banner{margin-left: 5px;position: relative;width: 600px;height: 480px;overflow: hidden;}
+        .banner .item{margin-left: 5px;position: absolute;top: 0px;}
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box flexs">
+            <ul class="nav flexb">
+                <li><a href="javascript:void(0)"></a></li>
+                <li class="navc"><a href="javascript:void(0)" style="background: url(img_01.jpg) no-repeat;"></a></li>
+                <li class="navc"><a href="javascript:void(0)" style="background: url(img_02.jpg) no-repeat;"></a></li>
+                <li class="navc"><a href="javascript:void(0)" style="background: url(img_03.jpg) no-repeat;"></a></li>
+                <li class="navc"><a href="javascript:void(0)" style="background: url(img_04.jpg) no-repeat;"></a></li>
+            </ul>
+            <div class="banner">
+                <ul class="item">
+                    <li><img src="1 (1).jpg" alt=""></li>
+                    <li><img src="2 (1).jpg" alt=""></li>
+                    <li><img src="3 (1).jpg" alt=""></li>
+                    <li><img src="4 (1).jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let timer = null;
+    let time = 5000;
+    let index;
+    function slider(){
+        if($('.item').css('top')!= '-1440px'){
+            $('.item').animate({top: '-=480px'},500);
+        }
+        else{
+            $('.item').animate({top: '0px'},500);
+        }
+        console.log($('.item').css('top'));
+        timer = setTimeout(slider,time);
+    }
+        timer = setTimeout(slider,time); 
+
+    $('.navc').mouseenter(function(){
+        let index = $(this).index()-1;
+        clearTimeout(timer);
+        timer = setTimeout(slider,time);
+        $('.item').animate({top: -index*480 + 'px'});
+    })
+
+
+
+</script>
+</html>

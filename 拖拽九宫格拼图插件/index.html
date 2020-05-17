@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .out {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            display: flex;
+        }
+        
+        #container {
+            width: 300px;
+            margin: 100px auto;
+            position: relative;
+            float: left;
+        }
+        
+        #container2 {
+            width: 300px;
+            margin: 100px auto;
+            position: relative;
+            float: left;
+        }
+        
+        #container2 .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px solid #eeeeee;
+            box-sizing: border-box;
+        }
+        
+        #container .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px solid #eeeeee;
+            box-sizing: border-box;
+        }
+        
+        #container3 {
+            width: 300px;
+            margin: 100px auto;
+            position: relative;
+            float: left;
+        }
+        
+        #container3 .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px solid #eeeeee;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div id="container"></div>
+        <div id="container2"></div>
+        <div id="container3"></div>
+    </div>
+    <script>
+        function Puzzle(number, root, num, img) {
+            this.root = root;
+            this.number = number;
+            this.num = num;
+            this.img = img;
+            this.flag;
+            this.box = this.root.getElementsByClassName('box');
+            // console.log(this.box);
+            this.correspond = [
+                '0px 0px',
+                '-100px 0px',
+                '-200px 0px',
+                '0px -100px',
+                '-100px -100px',
+                '-200px -100px',
+                '0px -200px',
+                '-100px -200px',
+                '-200px -200px',
+            ];
+            this.current = [];
+            this.targetRes = [
+                '0px 0px',
+                '-100px 0px',
+                '-200px 0px',
+                '0px -100px',
+                '-100px -100px',
+                '-200px -100px',
+                '0px -200px',
+                '-100px -200px',
+                '-200px -200px',
+            ];
+            this.init();
+            this.drag();
+        }
+        Puzzle.prototype.init = function() {
+            //固定图片大小
+            //创建拼图碎片
+            for (let i = 0; i < this.num; i++) {
+                let ele = document.createElement('div');
+                let num = i + 1;
+                ele.className = 'box';
+                ele.id = `${this.number}${i}`;
+                // console.log(ele.id);
+                ele.draggable = true;
+
+                let index = this.random(0, this.num - i);
+
+                // 获取随机背景图碎片
+                ele.style.background = 'url(' + this.img + ') ' + this.correspond[index];
+                // console.log(ele.style.background);
+                //防止随机图片重复
+                this.correspond.splice(index, 1);
+                this.root.appendChild(ele);
+            }
+
+        }
+        Puzzle.prototype.random = function(start, end) {
+            return Math.floor(Math.random() * end + start);
+        }
+        Puzzle.prototype.drag = function() {
+            let that = this;
+            // console.log(this.box);
+
+            for (let i = 0; i < this.box.length; i++) {
+                this.box[i].ondragstart = function(event) {
+
+                    event.dataTransfer.setData("Text", event.target.id);
+                    // event.dataTransfer.setData("Text", event.target.parentNode);
+                    console.log('拖动第' + (i + 1) + '个');
+
+                }
+                this.box[i].ondragover = function(event) {
+
+                    let ev = window.event || event;
+                    ev.preventDefault();
+                }
+                this.box[i].ondragleave = function(event) {
+                    let ev = window.event || event;
+                    ev.preventDefault();
+                }
+                this.box[i].ondrop = (event) => {
+                    let ev = window.event || event;
+                    ev.preventDefault();
+                    let data = ev.dataTransfer.getData("Text");
+                    let temp = ev.target.style.background;
+                    // 交换图片
+                    console.log(data, ev.target.id);
+                    if (data.length == ev.target.id.length) {
+                        ev.target.style.background = document.getElementById(data).style.background;
+                        document.getElementById(data).style.background = temp;
+                    } else {
+                        console.log('不是同一张拼图');
+                    }
+
+
+                    if (this.isEnd()) {
+                        alert('恭喜通关！');
+                    }
+                }
+
+            }
+        }
+        Puzzle.prototype.isEnd = function() {
+            let success = false;
+            for (let i = 0; i < this.box.length; i++) {
+
+                this.current[i] = this.box[i].style.backgroundPosition;
+
+            }
+
+            // console.log(this.current, this.targetRes);
+            if (this.current.toString() == this.targetRes.toString()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let puzzle = new Puzzle('I', document.getElementById('container'), 9, 'img.png');
+        let puzzle2 = new Puzzle('II', document.getElementById('container2'), 9, 'img.png');
+        let puzzle3 = new Puzzle('III', document.getElementById('container3'), 9, 'img.png');
+    </script>
+</body>
+
+</html>
