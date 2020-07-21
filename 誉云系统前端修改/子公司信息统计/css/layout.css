@@ -1,0 +1,146 @@
+body {
+    background-color: #f7f5ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    margin-left: 450px;
+    margin-top: 100px;
+}
+
+.container nav {
+    background-color: white;
+    height: 65px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.container nav h3 {
+    padding-left: 40px;
+    margin: auto 0;
+    height: 26px;
+    color: #666666;
+    /* text-align: center; */
+    vertical-align: middle;
+}
+
+.container header {
+    background-color: white;
+}
+
+header .total-list {
+    display: flex;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+header .total-list li {
+    height: 100%;
+    flex: 1;
+    text-align: center;
+}
+
+header .total-list li p {
+    font-size: 12px;
+    color: #222222;
+}
+
+header .total-list li h3 {
+    height: 50px;
+    font-weight: 500;
+}
+
+main {}
+
+main .layout-one {
+    display: flex;
+    justify-content: space-between;
+    /* height: 480px; */
+}
+
+main .layout-one .left {
+    height: 150%;
+    width: 550px;
+    
+}
+main .layout-one .left #main{
+    background-color: white;
+    margin-bottom: 10px;
+}
+main .layout-one .left #main1{
+    background-color: white;
+}
+
+main .layout-one .right {
+    /* background-color: white; */
+    height: 810px;
+    width: 360px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+main .layout-one .right .article {
+    height: 150px;
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    box-shadow: rgb(232, 250, 245) 1px 1px 10px 1px;
+}
+
+main .layout-one .right .article .a-left {
+    flex: 1;
+}
+
+main .layout-one .right .article .a-left .l-text {
+    padding: 12px 15px;
+}
+
+main .layout-one .right .article .a-left .l-text:nth-child(1) {
+    font-size: 14px;
+    color: #2a242e;
+    font-weight: 300;
+    ;
+}
+
+main .layout-one .right .article .a-left .l-text:nth-child(2) {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+main .layout-one .right .article .a-left .l-text:nth-child(3) {
+    font-size: 12px;
+    color: #939393;
+}
+
+main .layout-one .right .article .a-right {
+    flex: 1;
+    margin-top: 15px;
+}
+
+main .layout-one .right .article .a-right>span {
+    margin-right: 20px;
+}
+
+main .layout-one .right .m-article {
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: rgb(232, 250, 245) 1px 1px 10px 1px;
+    background-color: white;
+}
+main .layout-one .right .space {
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: rgb(232, 250, 245) 1px 1px 10px 1px;
+    background-color: white;
+}
+.wrap {
+    width: 920px;
+
+}

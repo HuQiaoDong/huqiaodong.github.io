@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/loadBar.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src='js/stopExecutionOnTimeout.js?t=1'></script>
+    <script src='js/do-in.js'></script>
+    <div class="container wrap">
+        <nav class="top wrap">
+            <h3>智能分析</h3>
+        </nav>
+        <header class="total">
+            <ul class="total-list">
+                <li>
+                    <h3>监测子公司数量</h3>
+                    <p>10家</p>
+                </li>
+                <li>
+                    <h3>文章数量</h3>
+                    <p>1,675,874篇</p>
+                </li>
+                <li>
+                    <h3>今日新增</h3>
+                    <p>18,530篇</p>
+                </li>
+                <li>
+                    <h3>敏感文章数量</h3>
+                    <p>679篇</p>
+                </li>
+            </ul>
+        </header>
+        ` <main class="content wrap">
+            <div class="layout-one">
+                <div class="left">
+                    <div id="main" style="width: 550px;height:480px;"></div>
+                    <div id="main1" style="width: 550px;height:320px;"></div>
+                </div>
+                <div class="right">
+                    <div class="article-total article">
+                        <div class="a-left">
+                            <h4 class="l-text">文章数量</h4>
+                            <p class="l-text">1479</p>
+                            <p class="l-text">今日新增量：33</p>
+                        </div>
+                        <div class="a-right">
+                            <span>环比增加</span>
+                            <span>+77%</span>
+                            <div data-to-value='77' data-items-count='32' id="p1_barPie" class="barPie barPie--radio">
+                                <span class="barPie__value">14</span>
+                                <div class="barPie__ring">
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem31" value="100"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem31" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem30" value="96.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem30" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem29" value="93.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem29" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem28" value="90.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem28" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem27" value="87.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem27" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem26" value="84.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem26" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem25" value="81.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem25" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem24" value="78.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem24" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem23" value="75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem23" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem22" value="71.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem22" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem21" value="68.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem21" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem20" value="65.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem20" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem19" value="62.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem19" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem18" value="59.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem18" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem17" value="56.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem17" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem16" value="53.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem16" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem15" value="50"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem15" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem14" value="46.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem14" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem13" value="43.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem13" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem12" value="40.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem12" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem11" value="37.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem11" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem10" value="34.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem10" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem9" value="31.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem9" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem8" value="28.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem8" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem7" value="25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem7" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem6" value="21.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem6" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem5" value="18.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem5" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem4" value="15.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem4" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem3" value="12.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem3" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem2" value="9.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem2" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem1" value="6.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem1" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem0" value="3.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem0" class="barPie__ring__item"></label>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="m-article article">
+                        <div class="a-left">
+                            <h4 class="l-text">敏感文章数量</h4>
+                            <p class="l-text">433</p>
+                            <p class="l-text">今日新增量：150</p>
+                        </div>
+                        <div class="a-right">
+                            <span>环比增加</span>
+                            <span>+77%</span>
+                            <div data-to-value='77' data-items-count='32' id="p1_barPie" class="barPie barPie--radio">
+                                <span class="barPie__value">14</span>
+                                <div class="barPie__ring">
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem31" value="100"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem31" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem30" value="96.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem30" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem29" value="93.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem29" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem28" value="90.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem28" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem27" value="87.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem27" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem26" value="84.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem26" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem25" value="81.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem25" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem24" value="78.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem24" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem23" value="75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem23" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem22" value="71.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem22" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem21" value="68.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem21" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem20" value="65.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem20" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem19" value="62.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem19" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem18" value="59.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem18" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem17" value="56.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem17" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem16" value="53.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem16" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem15" value="50"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem15" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem14" value="46.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem14" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem13" value="43.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem13" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem12" value="40.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem12" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem11" value="37.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem11" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem10" value="34.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem10" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem9" value="31.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem9" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem8" value="28.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem8" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem7" value="25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem7" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem6" value="21.875"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem6" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem5" value="18.75"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem5" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem4" value="15.625"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem4" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem3" value="12.5"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem3" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem2" value="9.375"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem2" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem1" value="6.25"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem1" class="barPie__ring__item"></label>
+                                    <input type="radio" name="barPieRadioGroup" id="p1_barPieItem0" value="3.125"
+                                        hidden="hidden" />
+                                    <label for="p1_barPieItem0" class="barPie__ring__item"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Echarts统计图配置文件 -->
+    <script src="./js/EchartsOption.js"></script>
+    <script src="./js/acticleView.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

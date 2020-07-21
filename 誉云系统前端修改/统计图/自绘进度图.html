@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas:hover+.mask{
+            opacity: 1;
+        }
+        .mask{
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="1900" height="400" id="canvas"></canvas>
+    <div class="mask" style="position: absolute;top:0px;left:0px;background:linear-gradient(rgba(0,150,255,0.1),rgba(0,150,255,0.2),rgba(0,150,255,0.3));width:1900px;height:400px;z-index: -1;"></div>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        let canvas = document.getElementById("canvas")
+        let ctx = canvas.getContext('2d');
+
+        let option = {
+            x: 200,
+            y: 200,
+            text: '新闻',
+            value:'85%',
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 1.2,
+            minBgcColor: "rgba(40,106,197,0.2)",
+            maxbgcColor: "rgba(40,106,197,1)",
+        }
+        let option1 = {
+            x: 400,
+            y: 200,
+            text: '论坛',
+            value:'70%',
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 0.9,
+            minBgcColor: "rgba(255,202,101,0.2)",
+            maxbgcColor: "rgba(255,202,101,1)"
+        }
+        let option2 = {
+            x: 600,
+            y: 200,
+            text: '博客',
+            value:'40%',
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 0.3,
+
+            minBgcColor: "rgba(229, 100, 126,0.2)",
+            maxbgcColor: "rgba(229, 100, 126,1)"
+        }
+        let option3 = {
+            x: 800,
+            y: 200,
+            text: '电子报',
+            value:'60%',
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 0.7,
+            minBgcColor: "rgba(143, 144, 179,0.2)",
+            maxbgcColor: "rgba(143, 144, 179,1)"
+        }
+        let option4 = {
+            x: 1000,
+            y: 200,
+            text: '客户端',
+            value:'72.5%',
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 0.95,
+            minBgcColor: "rgba(222, 229, 33,0.2)",
+            maxbgcColor: "rgba(222, 229, 33,1)"
+        }
+        let option5 = {
+            x: 1200,
+            text: '微信',
+            value:'92.5%',
+            y: 200,
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 1.35,
+            minBgcColor: "rgba(132, 202, 87,0.2)",
+            maxbgcColor: "rgba(132, 202, 87,1)"
+        }
+        let option6 = {
+            x: 1400,
+            text: '微博',
+            value:'67.5%',
+            y: 200,
+            radius: 50,
+            startAngle: -0.5,
+            endAngle: -0.5,
+            delay: 5,
+            maxAngle: 0.75,
+            minBgcColor: "rgba(155, 107, 108,0.2)",
+            maxbgcColor: "rgba(155, 107, 108,1)"
+        }
+
+        function runAsync(option) {
+            let timer = null;
+            let promise = new Promise((resolve, reject) => {
+                timer = setInterval(() => {
+
+                    drawArc(resolve, reject, option, timer);
+                    drawArc(resolve, reject, option1, timer);
+                    drawArc(resolve, reject, option2, timer);
+                    drawArc(resolve, reject, option3, timer);
+                    drawArc(resolve, reject, option4, timer);
+                    drawArc(resolve, reject, option5, timer);
+                    drawArc(resolve, reject, option6, timer);
+
+                }, option.delay)
+            })
+            return promise;
+        }
+
+        function drawArc(resolve, reject, option, timer) {
+            if (option.endAngle <= option.maxAngle) {
+                ctx.clearRect(option.x - 100, 0, 200, 400);
+
+                ctx.beginPath();
+                ctx.arc(option.x, option.y, option.radius, option.startAngle * Math.PI, 1.5 * Math.PI);
+                ctx.font = "14px Georgia";
+                
+                var gradient = ctx.createLinearGradient(option.x - 12, 0, option.x+30, 0);
+                gradient.addColorStop("0", "magenta");
+                gradient.addColorStop("0.5", "blue");
+                gradient.addColorStop("1.0", "red");
+                ctx.fillStyle = gradient;
+                ctx.fillText(option.text, option.x - 15, option.y)
+                ctx.font = "12px Georgia";
+                ctx.fillText(option.value, option.x - 10, option.y+16)
+                ctx.lineWidth = 20;
+                ctx.strokeStyle = option.minBgcColor;
+                ctx.stroke();
+                ctx.closePath();
+
+
+                option.endAngle += 0.01;
+                ctx.beginPath();
+                ctx.arc(option.x, option.y, option.radius, option.startAngle * Math.PI, option.endAngle * Math.PI);
+                ctx.lineWidth = 20;
+                ctx.strokeStyle = option.maxbgcColor;
+                ctx.stroke();
+                ctx.closePath();
+            } else {
+                resolve(timer);
+            }
+        }
+        runAsync(option).then((timer) => {
+            setTimeout(() => {
+                clearInterval(timer);
+            }, 1000)
+            console.log('绘制完成');
+        }).catch((err) => {
+
+        })
+    </script>
+</body>
+
+</html>
